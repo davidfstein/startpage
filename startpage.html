@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<title>Welcome</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/davidfstein/startpage/master/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/davidfstein/startpage/master/favicon-16x16.png">
 		<style>
 			body {
 				background-color: #061229;
 				height: 100vh;
 				color: #b8bbc2;
 				overflow: hidden;
+				font-family: "Source Code Pro", "Noto Sans Mono", monospace
 			}
 			a, a:visited {
 				text-decoration: none;
@@ -18,13 +20,16 @@
 			hr {
 				color: #b8bbc2;
 			}
-			.card-container {
+			h1 {
+				font-size: 128px;
+				margin-bottom: 0px;
+			}
+			.container {
 				display: flex;
 				justify-content: space-around;
 				align-items: center;
-				height: 70%;
 				width: 60%;
-				margin: 0px auto;
+				margin: 0px auto 80px auto;
 			}
 			.card {
 				height: 180px;
@@ -34,6 +39,19 @@
 				box-shadow: -1px 3px 3px #151619;
 				border-radius: 5px;
 			}
+			.main {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+			.search-input {
+				width: 400px;
+				height: 32px;
+				background-color: #b8bbc2;
+				border-color: #b8bbc2;
+				border-radius: 5px;
+			}
 			ul {
 				list-style-type: none;
 				padding-left: 0px;
@@ -41,68 +59,80 @@
 		</style>
 	</head>
 	<body>
-		<div class="card-container">
-			<div class="card">
-				<h4>dev</h4>
-				<hr>
-				<ul>
-					<li>
-					<a href="https://github.com/">github</a>
-					</li>
-					<li>
-					<a href="https://stackoverflow.com/">stack overflow</a>
-					</li>
-					<li>
-					<a href="https://wiki.archlinux.org/">arch</a>
-					</li>
-				</ul>
+		<div class="main">
+			<div class="container">
+				<h1>
+					Hello, King
+				</h1>
 			</div>
-			<div class="card">
-				<h4>research</h4>
-				<hr>
-				<ul>
-					<li>
-					<a href="https://www.biostars.org/">biostars</a>
-					</li>
-					<li>
-					<a href="https://www.ncbi.nlm.nih.gov/">ncbi</a>
-					</li>
-					<li>
-					<a href="https://pubmed.ncbi.nlm.nih.gov/">pubmed</a>
-					</li>
-				</ul>
+			<div class="container">
+				<form method="get" id="search" action="https://duckduckgo.com/?q=search&kp=-1&kl=us-en&kac=-1"">
+					<input name="q" type="text" class="search-input" autofocus>
+				</form>
 			</div>
-			<div class="card">
-				<h4>school</h4>
-				<hr>
-				<ul>
-					<li>
-					<a href="https://learn.mssm.edu">blackboard</a>
-					</li>
-					<li>
-					<a href="https://icahn.mssm.edu/">mssm</a>
-					</li>
-					<li>
-					<a href="https://webcommons.mssm.edu/thaw/">thaw</a>
-					</li>
-				</ul>	
+			<div class="container">
+				<div class="card">
+					<h4>dev</h4>
+					<hr>
+					<ul>
+						<li>
+						<a href="https://github.com/">github</a>
+						</li>
+						<li>
+						<a href="https://stackoverflow.com/">stack overflow</a>
+						</li>
+						<li>
+						<a href="https://wiki.archlinux.org/">arch</a>
+						</li>
+					</ul>
+				</div>
+				<div class="card">
+					<h4>research</h4>
+					<hr>
+					<ul>
+						<li>
+						<a href="https://www.biostars.org/">biostars</a>
+						</li>
+						<li>
+						<a href="https://www.ncbi.nlm.nih.gov/">ncbi</a>
+						</li>
+						<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/">pubmed</a>
+						</li>
+					</ul>
+				</div>
+				<div class="card">
+					<h4>school</h4>
+					<hr>
+					<ul>
+						<li>
+						<a href="https://learn.mssm.edu">blackboard</a>
+						</li>
+						<li>
+						<a href="https://icahn.mssm.edu/">mssm</a>
+						</li>
+						<li>
+						<a href="https://webcommons.mssm.edu/thaw/">thaw</a>
+						</li>
+					</ul>	
 
-			</div>
-			<div class="card">
-				<h4>social</h4>
-				<hr>
-				<ul>
-					<li>
-					<a href="https://www.reddit.com/">reddit</a>
-					</li>
-					<li>
-					<a href="https://www.reddit.com/">linkedin</a>
-					</li>
-					<li>
-					<a href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
-					</li>
-				</ul>
+				</div>
+				<div class="card">
+					<h4>social</h4>
+					<hr>
+					<ul>
+						<li>
+						<a href="https://www.reddit.com/">reddit</a>
+						</li>
+						<li>
+						<a href="https://linkedin.com/">linkedin</a>
+						</li>
+						<li>
+						<a href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
+						</li>
+					</ul>
 
+				</div>
 			</div>
 		</div>
 	</body>	
