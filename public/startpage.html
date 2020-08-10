@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Welcome</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/davidfstein/startpage/master/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/davidfstein/startpage/master/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/favicon-16x16.png">
 		<style>
 			body {
 				background-color: #061229;
@@ -57,6 +57,11 @@
 				padding-left: 0px;
 			}
 		</style>
+		<script>
+			window.onload = function() {
+				var input = document.querySelector(".search-input").focus();
+			};
+		</script>
 	</head>
 	<body>
 		<div class="main">
